@@ -1,4 +1,4 @@
-//! CALCULADORA DE IMPUESTOS EN PESOS ARGENTINOS Y EN DOLARES A PESOS ARGENTINOS
+//! CALCULADORA DE IMPUESTOS EN PESOS ARGENTINOS Y CONVERTIDORA DE DOLAR A PESO ARGENTINO PARA EL MISMO FIN.
 
 function calcularIva(monto, iva) {
     return monto * 0.21
@@ -16,7 +16,7 @@ function DolaraPesoArg (monto, precioUsd){
 const formatearDecimal = numero => { return numero.toLocaleString('es-AR', { minimunFractionDigits: 2, maximumFractionDigits: 2 }); }
 
 function calcularMontoTotal(){
-    let opciones = prompt("Calcular impuestos en: 1) AR$  2) USD")
+    let opciones = prompt("Calcular impuestos en: 1) AR$  2) U$D")
     if ( opciones === "1"){
         let monto = parseFloat(prompt("Ingrese el monto en pesos que desea calcular: "))
         if (isNaN (monto) || monto <= 0){
